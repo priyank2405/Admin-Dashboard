@@ -30,10 +30,11 @@ const chartData = [
 
 const AppBarChart = () => {
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <h1 className="text-lg font-medium mb-6">Total Revenue</h1>
-
-      <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+      
+      <div className="flex-1">
+      <ChartContainer config={chartConfig} className="h-full w-full">
         <BarChart data={chartData}>
           <CartesianGrid vertical={false} />
 
@@ -54,6 +55,7 @@ const AppBarChart = () => {
           <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
         </BarChart>
       </ChartContainer>
+      </div>
     </div>
   );
 };

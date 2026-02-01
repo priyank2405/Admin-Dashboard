@@ -28,7 +28,11 @@ const chartConfig = {
 
 const AppLineChart = () => {
   return (
-    <ChartContainer config={chartConfig} className="mt-6">
+      <div className="h-full flex flex-col">
+      <h1 className="text-lg font-medium mb-6">Traffic</h1>
+
+      <div className="flex-1">
+    <ChartContainer config={chartConfig} className="h-full w-full">
       <LineChart
         data={chartData}
         margin={{ left: 12, right: 12 }}
@@ -64,6 +68,8 @@ const AppLineChart = () => {
         />
       </LineChart>
     </ChartContainer>
+    </div>
+    </div>
   );
 };
 

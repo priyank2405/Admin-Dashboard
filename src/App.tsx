@@ -1,4 +1,4 @@
-import { SidebarProvider } from "./components/ui/sidebar";
+import { SidebarProvider, SidebarInset } from "./components/ui/sidebar";
 import Navbar from "./Dashboard-component/Navbar";
 import AppSidebar from "./Dashboard-component/Sidebar";
 import Homepage from "./Dashboard-component/Homepage";
@@ -6,17 +6,20 @@ import Homepage from "./Dashboard-component/Homepage";
 function App() {
   return (
     <SidebarProvider>
-      <div className="flex h-screen">
+      <div className="flex min-h-screen w-full">
+        {/* Sidebar */}
         <AppSidebar />
-        <div className="flex-1 ml-[1080px]">
+
+        {/* Main content */}
+        <SidebarInset className="flex flex-col">
           <Navbar />
-        </div>
-      </div>
-      <div>
-        <Homepage />
+
+          <main className="flex-1 p-4 overflow-auto">
+            <Homepage />
+          </main>
+        </SidebarInset>
       </div>
     </SidebarProvider>
-  
   );
 }
 
