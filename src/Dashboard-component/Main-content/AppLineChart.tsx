@@ -31,7 +31,6 @@ const AppLineChart = () => {
     <div className="h-full flex flex-col">
       <h1 className="text-lg font-medium mb-6">Traffic</h1>
 
-      {/* THIS wrapper is critical */}
       <div className="flex-1">
         <ChartContainer config={chartConfig} className="h-full w-full">
           <LineChart

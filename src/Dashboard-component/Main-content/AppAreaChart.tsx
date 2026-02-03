@@ -40,7 +40,6 @@ const AppAreaChart = () => {
     <div className="h-full flex flex-col">
       <h1 className="text-lg font-medium mb-4">Total Visitors</h1>
 
-      {/* This wrapper is CRITICAL */}
       <div className="flex-1">
         <ChartContainer config={chartConfig} className="h-full w-full">
           <AreaChart data={chartData}>
