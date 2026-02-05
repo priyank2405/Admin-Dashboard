@@ -56,8 +56,8 @@ const AppSidebar = () => {
                   width={50}
                   height={50}
                 />
-                <span className="text-[25px] font-bold text-[#FF5533]">
-                  Swiggy
+                <span className="text-[20px] font-bold text-[#FF5533]">
+                  SWIGGY
                 </span>
               </Link>
             </SidebarMenuButton>

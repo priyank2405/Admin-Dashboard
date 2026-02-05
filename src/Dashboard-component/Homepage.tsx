@@ -1,7 +1,7 @@
-import AppAreaChart from "./Main-content/AppAreaChart";
-import AppBarChart from "./Main-content/AppBarChart";
-import AppPieChart from "./Main-content/AppPieChart";
-import AppLineChart from "./Main-content/AppLineChart";
+import AppAreaChart from "./Chart-content/AppAreaChart";
+import AppBarChart from "./Chart-content/AppBarChart";
+import AppPieChart from "./Chart-content/AppPieChart";
+import AppLineChart from "./Chart-content/AppLineChart";
 import OrderCard from "./Cards/OrderCards";
 
 const Homepage = () => {
