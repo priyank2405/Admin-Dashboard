@@ -49,11 +49,11 @@ const AppSidebar = () => {
 
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader className="py-4 flex items-center">
+      <SidebarHeader className="py-4 flex items-center justify">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2 ml-6">
                 <img
                   src=".\public\logo.png"
                   alt="logo"

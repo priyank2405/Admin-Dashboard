@@ -1,8 +1,8 @@
-import AppAreaChart from "./Chart-content/AppAreaChart";
-import AppBarChart from "./Chart-content/AppBarChart";
-import AppPieChart from "./Chart-content/AppPieChart";
-import AppLineChart from "./Chart-content/AppLineChart";
-import OrderCard from "./Cards/OrderCards";
+import AppAreaChart from "../Chart-components/AppAreaChart";
+import AppBarChart from "../Chart-components/AppBarChart";
+import AppPieChart from "../Chart-components/AppPieChart";
+import AppLineChart from "../Chart-components/AppLineChart";
+import OrderCard from "../Cards/OrderCards";
 
 const Homepage = () => {
   return (

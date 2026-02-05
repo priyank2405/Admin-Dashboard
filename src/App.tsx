@@ -2,7 +2,7 @@ import { SidebarProvider, SidebarInset } from "./components/ui/sidebar";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Dashboard-component/Navbar";
 import AppSidebar from "./Dashboard-component/Sidebar";
-import Homepage from "./Dashboard-component/Homepage";
+import Homepage from "./Dashboard-component/Home-Components/Homepage";
 import Login from "./Dashboard-component/Login";
 import Inbox from "./Dashboard-component/Home-Components/Inbox";
 import CalendarPage from "./Dashboard-component/Home-Components/Calendar";
@@ -10,6 +10,7 @@ import Offers from "./Dashboard-component/Home-Components/Offers";
 import OrderHistory from "./Dashboard-component/Orders-components/OrderHistory";
 import PendingOrders from "./Dashboard-component/Orders-components/PendingOrders";
 import CancelledOrders from "./Dashboard-component/Orders-components/CancelledOrder";
+import Settings from "./Dashboard-component/Home-Components/Settings";
 
 function App() {
   const isAdmin = localStorage.getItem("isAdmin");
@@ -32,6 +33,7 @@ function App() {
               <Route path="/inbox" element={<Inbox />} />
               <Route path="/calendar" element={<CalendarPage />} />
               <Route path="/offers" element={<Offers />} />
+              <Route path="/Settings" element={<Settings />} />
               <Route path="/orders/history" element={<OrderHistory />} />
               <Route path="/orders/pending" element={<PendingOrders />} />
               <Route path="/orders/returns" element={<CancelledOrders />} />
