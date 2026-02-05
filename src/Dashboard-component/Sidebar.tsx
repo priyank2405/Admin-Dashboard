@@ -56,8 +56,8 @@ const AppSidebar = () => {
                   width={50}
                   height={50}
                 />
-                <span className="text-[15px] font-bold text-[#FF5533]">
-                  Swiggy Dashboard
+                <span className="text-[25px] font-bold text-[#FF5533]">
+                  Swiggy
                 </span>
               </Link>
             </SidebarMenuButton>

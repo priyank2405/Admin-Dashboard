@@ -7,21 +7,21 @@ import {
 } from "../../components/ui/chart";
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "Jan", revenue: 4200, profit: 1200 },
+  { month: "Feb", revenue: 5200, profit: 1800 },
+  { month: "Mar", revenue: 4800, profit: 1500 },
+  { month: "Apr", revenue: 6500, profit: 2400 },
+  { month: "May", revenue: 7200, profit: 2800 },
+  { month: "Jun", revenue: 8100, profit: 3200 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  revenue: {
+    label: "Revenue",
     color: "var(--chart-1)",
   },
-  mobile: {
-    label: "Mobile",
+  profit: {
+    label: "profit",
     color: "var(--chart-2)",
   },
 } satisfies ChartConfig;
@@ -29,14 +29,11 @@ const chartConfig = {
 const AppLineChart = () => {
   return (
     <div className="h-full flex flex-col">
-      <h1 className="text-lg font-medium mb-6">Traffic</h1>
+    <h1 className="text-lg font-medium mb-2">Revenue & Profit Trend</h1>
 
       <div className="flex-1">
         <ChartContainer config={chartConfig} className="h-full w-full">
-          <LineChart
-            data={chartData}
-            margin={{ left: 12, right: 12 }}
-          >
+          <LineChart data={chartData} margin={{ left: 12, right: 12 }}>
             <CartesianGrid vertical={false} />
 
             <XAxis
@@ -52,18 +49,18 @@ const AppLineChart = () => {
             <ChartTooltip content={<ChartTooltipContent />} />
 
             <Line
-              dataKey="desktop"
+              dataKey="revenue"
               type="monotone"
-              stroke="var(--color-desktop)"
-              strokeWidth={2}
+              stroke="var(--chart-1)"
+              strokeWidth={3}
               dot={false}
             />
 
             <Line
-              dataKey="mobile"
+              dataKey="profit"
               type="monotone"
-              stroke="var(--color-mobile)"
-              strokeWidth={2}
+              stroke="var(--chart-2)"
+              strokeWidth={3}
               dot={false}
             />
           </LineChart>

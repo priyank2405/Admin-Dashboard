@@ -9,29 +9,30 @@ import {
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  Online: {
+    label: "Online Orders",
     color: "var(--chart-1)",
   },
-  mobile: {
-    label: "Mobile",
+  Offline: {
+    label: "Offline Orders",
     color: "var(--chart-4)",
   },
 } satisfies ChartConfig;
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "Jan", online: 420, offline: 180 },
+  { month: "Feb", online: 510, offline: 220 },
+  { month: "Mar", online: 480, offline: 260 },
+  { month: "Apr", online: 650, offline: 300 },
+  { month: "May", online: 720, offline: 340 },
+  { month: "Jun", online: 810, offline: 390 },
 ];
+
 
 const AppBarChart = () => {
   return (
     <div className="h-full flex flex-col">
-      <h1 className="text-lg font-medium mb-6">Total Revenue</h1>
+      <h1 className="text-lg font-medium mb-2">Total Revenue</h1>
       
       <div className="flex-1">
       <ChartContainer config={chartConfig} className="h-full w-full">
@@ -51,8 +52,8 @@ const AppBarChart = () => {
           <ChartTooltip content={<ChartTooltipContent />} />
           <ChartLegend content={<ChartLegendContent />} />
 
-          <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-          <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+          <Bar dataKey="online" fill="var(--chart-1)" radius={4} />
+          <Bar dataKey="offline" fill="var(--chart-4)" radius={4} />
         </BarChart>
       </ChartContainer>
       </div>

@@ -13,10 +13,14 @@ import {
 import { Button } from "../components/ui/button";
 import { SidebarTrigger } from "../components/ui/sidebar";
 
- const Navbar = () => {
+const Navbar = () => {
   return (
     <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10">
-      <SidebarTrigger />
+      <div className="flex items-center">
+        <SidebarTrigger />
+
+        <h1 className="text-[20px] font-bold text-[#FF5533] ml-4">Dashboard</h1>
+      </div>
 
       <div className="flex items-center gap-4">
         <Link to="/" className="font-medium">
