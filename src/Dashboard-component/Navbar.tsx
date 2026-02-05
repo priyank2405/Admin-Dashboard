@@ -16,16 +16,13 @@ import { SidebarTrigger } from "../components/ui/sidebar";
  const Navbar = () => {
   return (
     <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10">
-      {/* LEFT */}
       <SidebarTrigger />
 
-      {/* RIGHT */}
       <div className="flex items-center gap-4">
         <Link to="/" className="font-medium">
-          Dashboard
+          Priyank
         </Link>
 
-        {/* USER MENU */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="p-0">
