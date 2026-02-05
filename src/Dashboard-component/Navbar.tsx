@@ -51,7 +51,12 @@ const Navbar = () => {
               Settings
             </DropdownMenuItem>
 
-            <DropdownMenuItem className="text-red-500">
+            <DropdownMenuItem
+              className="text-red-500 cursor-pointer"
+              onClick={() => {
+                localStorage.removeItem("isAdmin");
+                window.location.reload();
+              }}>
               <LogOut className="h-4 w-4 mr-2" />
               Logout
             </DropdownMenuItem>
