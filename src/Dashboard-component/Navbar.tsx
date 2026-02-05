@@ -1,5 +1,5 @@
 import { LogOut, Settings, User } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import {
@@ -14,17 +14,44 @@ import { Button } from "../components/ui/button";
 import { SidebarTrigger } from "../components/ui/sidebar";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const getPageTitle = () => {
+    switch (location.pathname) {
+      case "/":
+        return "Dashboard";
+      case "/inbox":
+        return "Inbox";
+      case "/calendar":
+        return "Calendar";
+      case "/offers":
+        return "Offers";
+      case "/settings":
+        return "Settings";
+      case "/orders/history":
+        return "Order History";
+      case "/orders/pending":
+        return "Pending Orders";
+      case "/orders/returns":
+        return "Return Orders";
+      default:
+        return "Dashboard";
+    }
+  };
+
   return (
     <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10">
       <div className="flex items-center">
         <SidebarTrigger />
 
-        <h1 className="text-[20px] font-bold text-[#FF5533] ml-4">Dashboard</h1>
+        <h1 className="text-[20px] font-bold ml-4 ">
+          {getPageTitle()}
+        </h1>
       </div>
 
       <div className="flex items-center gap-4">
         <Link to="/" className="font-medium">
-          Priyank
+          Admin
         </Link>
 
         <DropdownMenu>
@@ -56,7 +83,8 @@ const Navbar = () => {
               onClick={() => {
                 localStorage.removeItem("isAdmin");
                 window.location.reload();
-              }}>
+              }}
+            >
               <LogOut className="h-4 w-4 mr-2" />
               Logout
             </DropdownMenuItem>

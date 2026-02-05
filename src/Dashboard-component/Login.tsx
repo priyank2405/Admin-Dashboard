@@ -25,7 +25,7 @@ const Login = () => {
           </h1>
 
           <Input
-            placeholder="Enter admin email"
+            placeholder="Enter admin email (admin@gmail.com)"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleLogin()}
@@ -33,7 +33,7 @@ const Login = () => {
 
           <Input
             type="password"
-            placeholder="Enter password"
+            placeholder="Enter password (admin123)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleLogin()}
